@@ -24,8 +24,7 @@ public class Task39CombinationSum {
 
         if(target == 0){
             results.add(new ArrayList<>(combination));
-            return;
-        }
+            return;        }
 
         for (int i = startIndex; i <candidates.length; i++){
             if(candidates[i] > target){

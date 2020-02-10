@@ -39,10 +39,5 @@ Return an array (of length num_people and sum candies) that represents the final
         return result;
     }
 
-    public static void main(String[] args) {
-        int[] bom = new int[4];
-        bom = distributeCandies(16,4);
-        for(int i =0 ; i< 4; i++) System.out.println(bom[i]);
-
-    }
+  
 }

@@ -23,7 +23,7 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
     }};
 
 
-    public void backtrack(String combination, String next_digits) {
+    public void hateRecursive(String combination, String next_digits) {
 
         if (next_digits.length() == 0) {
             output.add(combination);
@@ -33,14 +33,14 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
             for (int i = 0; i < letters.length(); i++) {
                 String letter = dictonary.get(digit).substring(i, i + 1);
 
-                backtrack(combination + letter, next_digits.substring(1));
+                hateRecursive(combination + letter, next_digits.substring(1));
             }
         }
     }
 
-    public List<String> letterCombinations(String digits) {
+    public List<String> prepareLetterCombinations(String digits) {
         if (digits.length() != 0)
-            backtrack("", digits);
+            hateRecursive("", digits);
         return output;
     }
 }
